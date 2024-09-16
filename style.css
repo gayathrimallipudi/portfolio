@@ -1,0 +1,602 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #fff; /* Changed text color to white */
+  background-color: #000; /* Changed background color to black */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navigation Styles */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 60px; /* Minimal height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff; /* White text */
+  font-family: 'Helvetica', 'Arial', sans-serif; /* Clean, sans-serif font */
+}
+nav img {
+  height: 40px; /* Adjust the height to fit your navbar */
+  margin: 0 15px; /* Optional: Add some margin */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 30px; /* Even horizontal spacing */
+}
+
+.nav-links a {
+  font-size: 16px;
+  color: #fff; /* White text */
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  transition: color 0.3s ease;
+  padding: 10px; /* Padding for clickable area */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #bbb; /* Lighter gray on hover */
+}
+
+.burger {
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
+}
+
+.burger i {
+  color: #fff; /* White icon */
+  font-size: 24px;
+}
+
+/* Shadow Effect */
+nav {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    height: calc(100% - 60px);
+    width: 100%;
+    background-color: #000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .burger {
+    display: block; /* Show hamburger menu on mobile */
+  }
+
+  /* Toggle the navigation menu */
+  .nav-active {
+    transform: translateY(0);
+  }
+}
+
+/* Additional Styling for Open Menu */
+.nav-links li a {
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ccc; /* Adjust to your preferred lighter gray */
+}
+
+/* Animations */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Burger Menu Animation */
+.burger.toggle i {
+  transform: rotate(90deg); /* Rotate the hamburger icon when active */
+  transition: transform 0.3s ease;
+}
+
+/* Sections */
+.section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  background-color: #000; /* Set background to black */
+}
+
+.section .content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.section h1 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff; /* Ensure headings are white */
+}
+
+.section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd; /* Slightly lighter text color */
+}
+
+
+/* Glowing Text Effect */
+.glowing-text {
+font-family: 'Helvetica', 'Arial', sans-serif;
+font-size: 60px;
+font-weight: bold;
+text-align: center;
+margin: 0 auto;
+padding: 20px;
+position: relative;
+
+/* Gradient background */
+background: linear-gradient(
+  90deg,
+  #ff9500,
+  #ff5e3a,
+  #ff2d55,
+  #c644fc,
+  #5856d6,
+  #007aff,
+  #34aadc
+);
+background-size: 200% auto;
+
+/* Apply background to text */
+background-clip: text;
+-webkit-background-clip: text; /* For Safari */
+color: transparent;
+-webkit-text-fill-color: transparent; /* For Safari */
+
+/* Add glow effect */
+filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+-webkit-filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+
+/* Animation */
+animation: glowAnimation 5s linear infinite;
+}
+
+@keyframes glowAnimation {
+0% {
+  background-position: 0% center;
+}
+100% {
+  background-position: 200% center;
+}
+}
+
+/* Remove background color alternation */
+.section:nth-child(odd) {
+  background-color: #000;
+}
+
+.section:nth-child(even) {
+  background-color: #000;
+}
+
+/* About Section Styles */
+#about {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#about .content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#about .content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd;
+  text-align: justify; /* Align text to justify */
+  text-justify: inter-word; /* Improve word spacing for justification */
+}
+
+/* Experience, Education, Projects, Skills Sections */
+.experience-item,
+.project-item,
+.skill-category {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.experience-item h2,
+.project-item h2,
+.skill-category h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #0071e3; /* Accent color */
+}
+
+.experience-item .date,
+.project-item .tech-stack {
+  font-size: 16px;
+  color: #bbb; /* Light gray for dates */
+  margin-bottom: 10px;
+}
+
+.experience-item ul,
+.project-item p,
+.skill-category p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd; /* Slightly lighter text color */
+}
+
+.experience-item ul li {
+  margin-bottom: 10px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.skill-category {
+  flex: 1 1 calc(50% - 30px);
+}
+
+
+/* Education Section Styles */
+.education-item {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.education-item h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: #0071e3;
+}
+
+.education-item .degree {
+  font-size: 18px;
+  color: #bbb;
+  margin-bottom: 5px;
+}
+
+.education-item .date {
+  font-size: 16px;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.expand-btn {
+  background-color: transparent;
+  border: none;
+  color: #0071e3;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.expand-btn:hover {
+  text-decoration: underline;
+}
+
+.expand-btn::after {
+  content: '▼';
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.expand-btn[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.course-list {
+  list-style: disc inside;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.course-list li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 5px;
+}
+
+/* Ensure the hidden attribute works correctly */
+.course-list[hidden] {
+  display: none;
+}
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  width: 100%; /* Ensure the container takes full width */
+  margin: 0 auto;
+  overflow: hidden; /* Hide any overflow */
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform; /* Improve performance */
+}
+
+/* Carousel Card */
+.carousel-card {
+  min-width: 100%; /* Each card takes up 100% of the carousel container */
+  box-sizing: border-box;
+  background-color: #1e1e1e; /* Dark card background */
+  border-radius: 20px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  flex-shrink: 0; /* Prevent the card from shrinking */
+  overflow: hidden; /* Hide any overflow within the card */
+}
+
+/* Adjust images to prevent overflow */
+.carousel-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+/* Carousel Button */
+.carousel-card a {
+  /* Updated styles as per your previous requirements */
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  background-color: transparent;
+  color: #000;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.carousel-card a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Navigation Indicators */
+.carousel-nav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.carousel-nav .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background-color: #555;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-nav .dot.active,
+.carousel-nav .dot:hover {
+  background-color: #0071e3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-card {
+    padding: 30px 15px;
+  }
+
+  .carousel-card h2 {
+    font-size: 20px;
+  }
+}
+
+/* Certifications Section */
+.certifications-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.certifications-section ul li {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.certifications-section ul li a {
+  color: #0071e3; /* Accent color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.certifications-section ul li a:hover {
+  color: #005bb5; /* Slightly darker on hover */
+  text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-details {
+  text-align: center;
+}
+
+.contact-details p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.contact-details i {
+  color: #0071e3; /* Accent color */
+  margin-right: 10px;
+}
+
+.contact-details a {
+  color: #0071e3; /* Accent color */
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #000; /* Set background to black */
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .nav-links li {
+    margin-left: 20px;
+  }
+
+  .skills-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-category {
+    flex: 1 1 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile Navigation */
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    height: calc(100% - 70px);
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.95); /* Changed to dark background */
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 10px 20px;
+    width: 100%;
+    color: #2a1818; /* Ensure text is white */
+  }
+
+  .nav-links.nav-active {
+    transform: translateX(0);
+  }
+
+  .burger {
+    display: block;
+  }
+
+  /* Adjust section padding */
+  .section {
+    padding: 80px 20px;
+  }
+
+  .section h1 {
+    font-size: 36px;
+  }
+
+  .section p {
+    font-size: 16px;
+  }
+}
+
+/* Hamburger Menu Animation */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: #fff; /* Ensure lines are visible */
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  background-color: #fff; /* Ensure lines are visible */
+}
