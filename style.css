@@ -600,18 +600,62 @@ footer p {
   transform: rotate(45deg) translate(-5px, -6px);
   background-color: #fff; /* Ensure lines are visible */
 }
+/* Home Section */
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+/* Home Content */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Text Content */
+.home-text {
+  flex: 1;
+  text-align: left;
+  padding-right: 20px; /* Adds spacing between name and profile */
+}
+
+/* Profile Picture */
 .profile-container {
+  flex: 0.3;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 .profile-pic {
-  width: 180px; /* Adjust size as needed */
-  height: 180px;
-  border-radius: 50%; /* Makes it circular */
-  border: 4px solid #4A90E2; /* Optional: Blue border */
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .profile-container {
+      margin-top: 20px;
+  }
 }
