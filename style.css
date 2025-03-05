@@ -600,3 +600,18 @@ footer p {
   transform: rotate(45deg) translate(-5px, -6px);
   background-color: #fff; /* Ensure lines are visible */
 }
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  width: 180px; /* Adjust size as needed */
+  height: 180px;
+  border-radius: 50%; /* Makes it circular */
+  border: 4px solid #4A90E2; /* Optional: Blue border */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
