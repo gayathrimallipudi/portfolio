@@ -776,9 +776,16 @@ animation: glowAnimation 5s linear infinite;
   color: #ffcc66;
 }
 .footer {
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #777;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #1a1a1a; /* Adjust to match your theme */
+  color: #f2f2f2;
+  font-size: 14px;
 }
 
 
