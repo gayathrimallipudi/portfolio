@@ -306,9 +306,10 @@ animation: glowAnimation 5s linear infinite;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 30px;
   width: 100%;
-  max-width: 1200px; /* Expanding to fit better */
+  max-width: 1000px; /* Expanding to fit better */
   margin: 0 auto;
 }
 
@@ -317,8 +318,8 @@ animation: glowAnimation 5s linear infinite;
   background: #1e1e2f; /* Dark background for cards */
   border-radius: 10px;
   padding: 20px 30px;
-  max-width: 1100px; /* Increased from 900px */
-  width: 95%; /* Keep it responsive */
+  max-width: 1000px; /* Increased from 900px */
+  width: 100%; /* Keep it responsive */
   min-height: 220px;
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -737,12 +738,23 @@ animation: glowAnimation 5s linear infinite;
   box-shadow: 0 6px 15px rgba(255, 165, 0, 0.6);
 }
 
+
 .contact-icon {
-  font-size: 30px;
-  display: block;
+  font-size: 30px; /* Adjust size */
   margin-bottom: 10px;
 }
 
+
+
+/* LinkedIn Icon */
+.fa-linkedin {
+  color: #0077B5; /* LinkedIn Blue */
+}
+
+/* GitHub Icon */
+.fa-github {
+  color: #FFFFFF; /* White */
+}
 .contact-box h3 {
   font-size: 18px;
   color: #ffa500;
