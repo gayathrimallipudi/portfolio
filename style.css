@@ -79,7 +79,7 @@ nav img {
 
 .nav-links a {
   font-size: 16px;
-  color: #fff; /* White text */
+  color: #ff9800; /* White text */
   font-family: 'Helvetica', 'Arial', sans-serif;
   transition: color 0.3s ease;
   padding: 10px; /* Padding for clickable area */
@@ -87,7 +87,7 @@ nav img {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #bbb; /* Lighter gray on hover */
+  color: #ff9800; /* Lighter gray on hover */
 }
 
 .burger {
@@ -259,13 +259,13 @@ animation: glowAnimation 5s linear infinite;
 .section-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #a87ffb; /* Adjust color as needed */
+  color: #c44900; /* Adjust color as needed */
   margin-bottom: 10px;
 }
 
 .section-subtitle {
   font-size: 1.2rem;
-  color: #bdbdbd;
+  color: #ff9500;
   margin-bottom: 40px;
 }
 
@@ -343,11 +343,12 @@ animation: glowAnimation 5s linear infinite;
   margin-bottom: 8px;
 }
 
+
 /* Company Name & Duration */
 .experience-company {
   font-size: 18px;
   font-weight: bold;
-  color: #ffffff;
+  color: #ff9500;
   margin-bottom: 8px;
 }
 
@@ -396,7 +397,7 @@ animation: glowAnimation 5s linear infinite;
 .skill-title {
   font-size: 18px;
   font-weight: bold;
-  color: #ffffff;
+  color: #ff9800;
   margin-bottom: 15px;
 }
 
@@ -657,7 +658,7 @@ animation: glowAnimation 5s linear infinite;
 .section-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #fff; /* Soft purple */
+  color: #c44900; /* Soft purple */
   margin-bottom: 10px;
 }
 
@@ -710,7 +711,7 @@ animation: glowAnimation 5s linear infinite;
 .section-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #ff9966; /* Warm glow */
+  color: #c44900; /* Warm glow */
   margin-bottom: 10px;
 }
 
