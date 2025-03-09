@@ -945,9 +945,9 @@ animation: glowAnimation 5s linear infinite;
   width: 300px; /* Increase size */
   height: 350px; /* Increase size */
   border-radius: 30%;
-  border: 4px solid #CFAE60; /* Soft gold border */
+  border: 4px solid #FFDA73; /* Soft gold border */
   object-fit: cover;
-  box-shadow: 0px 6px 15px rgba(207, 174, 96, 0.5); /* Slightly stronger glow */
+  box-shadow: 0px 6px 15px #FFD700; /* Slightly stronger glow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
