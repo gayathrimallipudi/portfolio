@@ -307,3 +307,49 @@ navLinks.addEventListener('click', () => {
     });
   }
 });
+
+
+// GSAP ribbon-style cursor trail
+document.addEventListener('DOMContentLoaded', () => {
+  const trail = document.querySelector('.cursor-ribbon');
+
+  const coords = { x: 0, y: 0 };
+  const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+
+  gsap.set(trail, {
+    xPercent: -50,
+    yPercent: -50,
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    coords.x = e.clientX;
+    coords.y = e.clientY;
+  });
+
+  gsap.ticker.add(() => {
+    pos.x += (coords.x - pos.x) * 0.15;
+    pos.y += (coords.y - pos.y) * 0.15;
+    gsap.set(trail, {
+      x: pos.x,
+      y: pos.y,
+    });
+  });
+    // Fading particles behind the ribbon
+    setInterval(() => {
+      const particle = document.createElement('div');
+      particle.className = 'ribbon-particle';
+      particle.style.left = `${pos.x}px`;
+      particle.style.top = `${pos.y}px`;
+      document.body.appendChild(particle);
+  
+      // Optional size & glow randomization
+      const size = Math.random() * 4 + 4;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.filter = `blur(${Math.random() * 2}px)`;
+  
+      setTimeout(() => {
+        particle.remove();
+      }, 600);
+    }, 40); // Adjust for more/less trail density
+});
